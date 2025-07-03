@@ -1,0 +1,278 @@
+﻿/* =============================================================
+   LICENSE
+   Author URI: www.binarytheme.com
+   License: Creative Commons Attribution 3.0
+   http://creativecommons.org/licenses/by/3.0/
+   ============================================================ */
+
+/* =============================================================
+   TABLE OF CONTENTS
+   ============================================================
+   1. BASE STYLES
+   2. LAYOUT & STRUCTURE
+   3. NAVIGATION
+   4. DASHBOARD COMPONENTS
+   5. CHAT WIDGETS
+   6. FOOTER
+   7. UTILITIES
+   ============================================================ */
+
+/* 1. BASE STYLES
+   ============================================================ */
+:root {
+  --primary-color: #9170E4;
+  --secondary-color: #F70E62;
+  --tertiary-color: #5AA8CC;
+  --text-color: #333;
+  --light-gray: #f7f7f7;
+  --border-color: #eeeeee;
+  --dark-gray: #808080;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.75;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+/* 2. LAYOUT & STRUCTURE
+   ============================================================ */
+.content-wrapper {
+  margin-top: 40px;
+  min-height: 800px;
+  padding-bottom: 90px;
+}
+
+/* 3. NAVIGATION
+   ============================================================ */
+/* NAVIGATION MENU FIXES */
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 5px;
+  white-space: nowrap;
+}
+
+.nav-link {
+  padding: 10px 15px !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+  background-color: #f0f0f0 !important;
+  color: #9170E4 !important;
+}
+
+.dropdown-menu {
+  border: none !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+  padding: 8px 20px !important;
+  text-transform: capitalize !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav-item {
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  .nav-link {
+    padding: 12px 20px !important;
+    display: block;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+    box-shadow: none;
+  }
+}
+/* 4. DASHBOARD COMPONENTS
+   ============================================================ */
+.header-line {
+  font-weight: 900;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+}
+
+.pad-botm {
+  padding-bottom: 30px;
+}
+
+.slide-bdr {
+  border: 5px solid var(--primary-color);
+}
+
+.back-widget-set {
+  background-color: transparent;
+}
+
+/* 5. CHAT WIDGETS
+   ============================================================ */
+.chat-widget-main {
+  max-height: 330px;
+  overflow: auto;
+}
+
+.chat-widget-left,
+.chat-widget-right {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.chat-widget-left {
+  border: 1px solid var(--secondary-color);
+}
+
+.chat-widget-right {
+  border: 1px solid var(--tertiary-color);
+}
+
+.chat-widget-left:after {
+  top: 100%;
+  left: 10%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  border-top-color: var(--secondary-color);
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.chat-widget-right:after {
+  top: 100%;
+  right: 10%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  border-top-color: var(--tertiary-color);
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.img-comments,
+.img-left-chat,
+.img-right-chat {
+  border: 3px double #e1e1e1;
+}
+
+.img-left-chat {
+  float: left;
+  margin-right: 30px;
+}
+
+.img-right-chat {
+  float: right;
+  margin-left: 30px;
+}
+
+.chat-widget-name-left,
+.chat-widget-name-right {
+  color: var(--dark-gray);
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+.chat-widget-name-left {
+  margin-left: 60px;
+  text-align: left;
+}
+
+.chat-widget-name-right {
+  margin-right: 60px;
+  text-align: right;
+}
+
+.chat-widget-name-left h4,
+.chat-widget-name-right h4 {
+  font-size: 0.6875rem;
+}
+
+.chat-widget-name-left h5,
+.chat-widget-name-right h5 {
+  font-size: 0.625rem;
+}
+
+.recent-users-sec img {
+  max-height: 80px;
+  margin: 15px;
+}
+
+/* 6. FOOTER
+   ============================================================ */
+.footer-section {
+  padding: 25px 50px;
+  color: var(--text-color);
+  font-size: 0.8125rem;
+  background-color: var(--light-gray);
+  text-align: right;
+  border-top: 5px solid var(--primary-color);
+}
+
+.footer-section a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--primary-color);
+}
+
+/* 7. UTILITIES
+   ============================================================ */
+.set-radius-zero {
+  border-radius: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    margin-top: 20px;
+    padding-bottom: 60px;
+  }
+  
+  .right-div {
+    padding: 10px;
+  }
+  
+  #menu-top a {
+    padding: 15px 10px;
+  }
+  
+  .chat-widget-name-left,
+  .chat-widget-name-right {
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .img-left-chat,
+  .img-right-chat {
+    float: none;
+    margin: 0 auto 15px;
+    display: block;
+  }
+}
